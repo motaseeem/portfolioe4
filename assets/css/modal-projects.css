@@ -21,7 +21,7 @@
 
 @media only screen and (max-width: 1250px) {
     .modal-projects {
-        max-width: 95%;
+        max-width: 95vw;
         margin: 0rem;
         padding: 0;
     }

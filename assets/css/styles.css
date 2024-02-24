@@ -360,7 +360,7 @@ ul.list li:before {
   color: #666;
   font-weight: 700;
   text-align: left;
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-wrap: wrap;
 }
