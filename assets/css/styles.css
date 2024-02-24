@@ -18,7 +18,7 @@
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --text-color-light: hsl(var(--hue-color), 8%, 55%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
@@ -144,17 +144,17 @@ img {
 ul {
   list-style-type: none; /* Supprime les marqueurs par défaut des listes */
 }
-
+/*
 ul.list li {
   position: relative;
-  padding-left: 20px; /* Ajustez cette valeur selon vos besoins pour déplacer le marqueur */
+  padding-left: 20px;
 }
 
 ul.list li:before {
   content: "\2022";
   position: absolute;
   left: 0;
-}
+}*/
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
@@ -183,6 +183,10 @@ ul.list li:before {
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
+}
+
+.portfolio__data {
+  text-align: center;
 }
 
 .grid {
@@ -356,7 +360,9 @@ ul.list li:before {
   color: #666;
   font-weight: 700;
   text-align: left;
-  width: 425px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .home__scroll {
@@ -418,6 +424,10 @@ ul.list li:before {
   align-items: center;
 }
 
+.button-block {
+  display: block;
+}
+
 .button--white {
   background-color: #fff;
   color: var(--first-color);
@@ -439,7 +449,7 @@ ul.list li:before {
 
 .button--link:hover {
   background-color: transparent;
-  color: var(--first-color-alt);
+  opacity: 0.7;
 }
 
 /*==================== ABOUT ====================*/
@@ -1258,6 +1268,10 @@ figure:hover .survol {
   .section {
     padding: 6rem 0 2rem;
   }
+  section {
+    margin-bottom: 7rem;
+    border-top: 1px solid var(--title-color);
+  }
 
   .header {
     top: 0;
@@ -1362,10 +1376,6 @@ figure:hover .survol {
 
   .services__model-content {
     width: 450px;
-  }
-
-  .portfolio__img {
-    width: 320px;
   }
 
   .portfolio__content {
@@ -1486,4 +1496,10 @@ figure:hover .survol {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background: rgb(97, 96, 96);
+}
+
+
+.hidden-input {
+  width: 0;
+  height: 0;
 }
