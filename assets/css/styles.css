@@ -360,7 +360,7 @@ ul.list li:before {
   color: #666;
   font-weight: 700;
   text-align: left;
-  width: 400px;
+  width: 350px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -702,7 +702,7 @@ ul.list li:before {
   display: block;
 }
 
-.qualification__button.qualification__active {
+.qualification__active {
   color: var(--first-color);
 }
 
@@ -742,6 +742,11 @@ ul.list li:before {
 
 .img-projects {
   border-radius: 12px;
+}
+@media only screen and (max-width: 1200px) {
+  .img-projects {
+    height: 170px;
+  }
 }
 
 .img-projects:hover {

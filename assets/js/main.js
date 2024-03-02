@@ -59,11 +59,11 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.target);
 
     tabContents.forEach((tabContents) => {
-      tabContents.classList.remove("qualification__active");
+      tabContents.className = "qualification__content";
     });
     target.classList.add("qualification__active");
     tabs.forEach((tab) => {
-      tab.classList.remove("qualification__active ");
+      tab.className = "qualification__content";
     });
     tab.classList.add("qualification__active");
   });
@@ -207,3 +207,15 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+function displayMicroCertifName() {
+  const micro = document.getElementById('microsoft-certification');
+  if (micro) {
+    if (window.screen.width >= 1200) {
+      micro.innerHTML = 'Microsoft Dotnet Certification';
+    } else {
+      micro.innerHTML = 'Dotnet';
+    }
+  }
+}
+displayMicroCertifName();

@@ -2,7 +2,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -52%);
     z-index: -1;
     max-width: 97vw;
     margin: 1.5rem 0rem;
@@ -11,6 +11,7 @@
     width: 100%;
     background-color: rgb(45, 128, 130);
     border-radius: 16px;
+    border: 1px solid black;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@
 
 @media only screen and (max-width: 1250px) {
     .modal-projects {
-        max-width: 95vw;
+        max-width: 95%;
         margin: 0rem;
         padding: 0;
     }
@@ -36,7 +37,6 @@
     font-size: 2rem;
     border-bottom: 2px solid rgb(118, 116, 116);
     padding: .7rem 2rem;
-    color: white;
 }
 
 .modal-body {
@@ -76,7 +76,6 @@
 }
 
 .modal-body-img {
-    width: 60%;
     height: 400px;
     border-radius: 12px;
     margin-bottom: 1rem;
