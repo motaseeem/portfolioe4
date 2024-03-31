@@ -158,7 +158,8 @@ ul.list li:before {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 2rem 0 4rem;
+  padding: 4rem 0 4rem;
+  border-top: 1px solid var(--first-color);
 }
 
 .section__title {
@@ -641,13 +642,15 @@ ul.list li:before {
   margin-bottom: var(--mb-2);
 }
 
-.qualification__button {
+.qualification__button,
+.qualification__content {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
 }
 
-.qualification__button:hover {
+.qualification__button:hover,
+.qualification__content:hover {
   color: var(--first-color);
 }
 
@@ -712,6 +715,13 @@ ul.list li:before {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
+
+@media only screen and (max-width: 1250px) {
+  .grid {
+    gap: 0.5rem;
+  }
+}
+
 
 .services__content {
   position: relative;
@@ -1270,14 +1280,6 @@ figure:hover .survol {
     margin: 0;
   }
 
-  .section {
-    padding: 6rem 0 2rem;
-  }
-  section {
-    margin-bottom: 7rem;
-    border-top: 1px solid var(--title-color);
-  }
-
   .header {
     top: 0;
     bottom: initial;
@@ -1358,11 +1360,12 @@ figure:hover .survol {
     justify-content: center;
   }
 
-  .qualification__button {
+  .qualification__button,
+  .qualification__content {
     margin: 0 var(--mb-1);
   }
 
-  .qualification__sectionss {
+  .qualification__sections {
     grid-template-columns: 0.5fr;
   }
 
@@ -1507,4 +1510,45 @@ figure:hover .survol {
 .hidden-input {
   width: 0;
   height: 0;
+}
+
+.container-veille {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(./../img/fond-bg-veille.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 1.2rem;
+  border-radius: 12px;
+}
+
+.item-veille {
+  padding: 15px 20px;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--title-color);
+  display: flex;
+  flex-direction: column;
+  background: black;
+}
+
+@media only screen and (max-width: 1250px) {
+  .item-veille {
+    width: 100%;
+  }
+}
+
+.item-veille div {
+  font-weight: 600;
+}
+.item-veille span {
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+.img-veille { 
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
